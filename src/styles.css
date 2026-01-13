@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@layer base {
+    body {
+        @apply bg-slate-800 px-4 text-white;
+    }
+
+    h1 {
+        @apply text-3xl font-bold mb-2;
+    }
+}
+
+@layer components {
+    .form-control {
+        @apply mb-2 rounded-md border border-gray-600 bg-transparent px-4 py-3 text-gray-400 outline-none disabled:cursor-not-allowed;
+    }
+}
