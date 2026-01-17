@@ -1,17 +1,38 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme {
+  --color-gold-50: oklch(98.5% 0.02 100);
+  --color-gold-100: oklch(96.7% 0.035 100);
+  --color-gold-200: oklch(92.5% 0.07 100);
+  --color-gold-300: oklch(87.1% 0.107 100);
+  --color-gold-400: oklch(80.5% 0.14 100);
+  --color-gold-500: oklch(73.2% 0.175 100);
+  --color-gold-600: oklch(65.5% 0.18 100);
+  --color-gold-700: oklch(54.1% 0.17 100);
+  --color-gold-800: oklch(42.5% 0.13 100);
+  --color-gold-900: oklch(27.2% 0.09 100);
+  --color-gold-950: oklch(16% 0.06 100);
+  --color-gold-950: oklch(0.01 0.005 123.39);
+
+  --font-monstserrat-alternatives: "Montserrat Alternates", sans-serif;
+}
 
 @layer base {
-    body {
-        @apply bg-slate-800 px-4 text-white;
-    }
+  body {
+    @apply bg-slate-800 px-4 text-white;
+  }
 
-    h1 {
-        @apply text-3xl font-bold mb-2;
-    }
+  h1 {
+    @apply mb-2 text-3xl font-bold;
+  }
 }
 
 @layer components {
-    .form-control {
-        @apply mb-2 rounded-md border border-gray-600 bg-transparent px-4 py-3 text-gray-400 outline-none disabled:cursor-not-allowed;
-    }
+  .form-control {
+    @apply mb-2 rounded-md border border-gray-600 bg-transparent px-4 py-3 text-gray-400 outline-none disabled:cursor-not-allowed;
+  }
 }
